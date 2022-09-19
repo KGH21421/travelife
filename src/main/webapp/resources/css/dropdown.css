@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.dropdown-content { /* 클릭했을때마다 열리고 닫히는 설정 */
+	display: none;
+	position: absolute;
+	background-color: #d3cfcf;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a { /* 클릭해서 드롭아웃하면 세로로 표시해서 나오게 하기? */
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+div.dropdown {
+            display: inline-block;
+            position:relative;
+            z-index:2;
+        }
+        
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+} /* 마우스올리면 해당 칸 색 변경 */
+.show {
+	display: block;
+} /* 이게 잇어야 드롭아웃이 됨...? /dropdown-content 가 dropdown-content show 바뀌면서 드롭아웃이 됨  */

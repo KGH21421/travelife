@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="all">
+
+	<sql id="search">
+		<where>
+			<if test="search == 1">
+				title LIKE CONCAT(CONCAT('%',#{keyword}),'%')
+			</if>
+			
+			<if test="search == 2">
+				contents LIKE CONCAT(CONCAT('%',#{keyword}),'%')
+			</if>
+			
+			<if test="search == 3">
+				title LIKE CONCAT(CONCAT('%',#{keyword}),'%')
+				or
+				contents LIKE CONCAT(CONCAT('%',#{keyword}),'%')
+			</if>
+			
+			<if test="search == 4">
+				id LIKE CONCAT(CONCAT('%',#{keyword}),'%')
+			</if>
+		</where>
+	</sql>
+	
+ 	<select id="total" resultType="Integer"> 
+		SELECT SUM(cnt)
+		FROM(
+		SELECT COUNT(*) AS cnt 
+		FROM landmark
+		UNION
+		SELECT COUNT(*) AS cnt 
+		from hotel
+		UNION
+		SELECT COUNT(*) AS cnt 
+		from food
+		UNION
+		SELECT COUNT(*) AS cnt 
+		from talk) tb2;
+	</select>
+	
+	<select id="list" resultType="All">
+		SELECT *
+		FROM landmark NATURAL JOIN member
+		UNION
+		SELECT *
+		FROM hotel NATURAL JOIN member
+		UNION
+		SELECT *
+		FROM food NATURAL JOIN member
+		UNION
+		SELECT *
+		FROM talk NATURAL JOIN member
+		ORDER BY regDate DESC
+		LIMIT #{offset}, #{perPage}
+	</select>
+	
+	<select id="alist" resultType="All">
+		SELECT *
+		FROM landmark NATURAL JOIN member
+		<include refid="search"/>
+		UNION
+		SELECT *
+		FROM hotel NATURAL JOIN member
+		<include refid="search"/>
+		UNION
+		SELECT *
+		FROM food NATURAL JOIN member
+		<include refid="search"/>
+		UNION
+		SELECT *
+		FROM talk NATURAL JOIN member
+		<include refid="search"/>
+		ORDER BY regDate DESC
+		LIMIT #{offset}, #{perPage}
+	</select>
+</mapper>

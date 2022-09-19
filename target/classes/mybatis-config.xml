@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<package name="kr.ac.travelife.model"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mybatis/member.xml"></mapper>
+		<mapper resource="mybatis/hotel.xml"></mapper>
+		<mapper resource="mybatis/landmark.xml"></mapper>
+		<mapper resource="mybatis/mypage.xml"></mapper>
+		<mapper resource="mybatis/notice.xml"></mapper>
+		<mapper resource="mybatis/all.xml"></mapper>
+		<mapper resource="mybatis/talk.xml"></mapper>
+		<mapper resource="mybatis/food.xml"></mapper>
+	</mappers>
+	
+</configuration>

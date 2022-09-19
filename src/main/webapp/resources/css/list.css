@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap')
+	;
+.container{
+            width:100%;
+            margin:0 auto;
+            padding-top: 10px;
+		}
+
+#head {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.top {
+	margin: auto;
+}
+
+#b_list {
+	text-align: center;
+	height: 30px;
+}
+#b_list a{
+	text-decoration:none;
+	color:black;
+}
+#b_list td {
+	font-family: "Namun Myeongjo";
+	font-size: 14pt;
+	margin: auto;
+}
+
+nav {
+	width: 100%;
+	height: 30px;
+	/*position:fixed; 상단바 따라다니기 설정임*/
+	top: 0;
+	right: 0;
+	line-height: 40px;
+}
+
+#rogo {
+	width: 500px;
+}
+
+#rogo a {
+	font-family: "Cinzel";
+	margin-left: 20px;
+	font-weight: 600;
+	font-size: 30pt;
+	text-decoration: none;
+	color: black;
+}
+
+td img {
+	vertical-align: middle;
+}
+
+#list_h {
+	margin-top: 300px;
+	width: 100%;
+	margin: auto;
+}
+
+#top {
+	align: center;
+	width: 60%;
+	margin-top:300px;
+	margin:auto;
+	left:20%;
+}
+   
+#cont{
+	width:100%;
+	margin-top:150px;
+	position:absolute;
+}
+#cen {
+	text-align: center;
+}
+
+#code {
+	width: 10%;
+	text-align: center;
+}
+
+#tit {
+	width: 50%;
+}
+
+#nick {
+	text-align: center;
+	width: 20%;
+}
+#ban {
+	background:center no-repeat;
+	background-size:cover;
+	text-align:center;
+	top: 0;
+	right: -200%;
+	left: -200%;
+	position:absolute;
+	margin-bottom:500px;
+}
+#main{
+	margin-top: 30px;
+	position:relative;
+	z-index:1;
+}
+#t_hd{
+	background-color:rgba(0,0,0,0.7);
+	color:white;
+}
+#t_bd{
+	background-color:rgba(255,255,255,0.6);
+	color:black;
+}
+#tit a{
+	text-decoration:none;
+	color:black;
+}
+body{
+	overflow-x:hidden;
+}
+#copyright{
+	margin-top:400px;
+	background:center no-repeat;
+	background-size:cover;
+	text-align:center;
+	right: -200%;
+	left: -200%;
+	position:absolute;
+}

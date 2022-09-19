@@ -1,0 +1,183 @@
+@charset "UTF-8";
+       @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+        .container{
+            width:100%;
+            margin:0 auto;
+            padding-top: 10px;
+		}
+        @keyframes main{
+            from{
+                opacity:0;
+            }
+            to{
+                opacity:1;
+	    	}
+    	}
+.top {
+	margin: auto;
+}
+
+#rogo {
+	width: 500px;
+}
+
+#rogo a {
+	font-family: "Cinzel";
+	margin-left: 20px;
+	font-weight: 600;
+	font-size: 30pt;
+	text-decoration: none;
+	color: black;
+}
+
+#b_list {
+	text-align: center;
+	height: 30px;
+}
+
+#b_list td {
+	font-family: "Namun Myeongjo";
+	font-size: 14pt;
+	margin: auto;
+}
+
+nav {
+	width: 100%;
+	height: 30px;
+	/*position:fixed; 상단바 따라다니기 설정임*/
+	top: 0;
+	right: 0;
+	line-height: 40px;
+}
+
+body {
+	overflow-x:hidden;
+	animation-name: main;
+	/*animation-duration:2s;*/
+}
+
+td img {
+	vertical-align: middle;
+}
+#align {
+	margin: auto;
+	margin-top: 150px;
+}
+
+#noto_main {
+	font-family: 'Noto Sans KR';
+	font-weight: 600;
+	font-size: 16pt;
+	width: 350px;
+	text-decoration: none;
+	color: black;
+	margin-right: 290px;
+}
+
+#notice {
+	background-color: rgb(255,255,255,0.7);
+	color:black;
+	height: 400px;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	position:absolute;
+	left:20%;
+	margin-top:150px;
+}
+
+#align2 {
+	margin: auto;
+}
+
+.list-left {
+	float: left;
+	margin-right: 100px;
+}
+
+.list-right {
+	float: right;
+}
+
+.s-list {
+	height: 300px;
+	padding-top: 50px;
+}
+
+hr {
+	margin: 0;
+	background-color: black;
+	height: 1px;
+}
+
+.s-t {
+	font-family: 'Noto Sans KR';
+	font-size: 12pt;
+}
+
+.s-t tr th {
+	text-align: center;
+}
+
+.s-t tr th a {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.tit {
+	width: 53%;
+}
+
+.nick {
+	width: 20%;
+	text-align: center;
+}
+
+.viw {
+	width: 15%;
+	text-align: center;
+}
+
+.dat {
+	width: 20%;
+	text-align: center;
+}
+
+.info_set tr th {
+	width: 40%;
+}
+
+.info_set tr td {
+	width: 60%;
+}
+
+#no_any {
+	text-align: center;
+}
+
+#ban {
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+}
+
+.main {
+	margin-top: 30px;
+	position: relative;
+	z-index:1;
+}
+#copyright{
+	margin-top:650px;
+	background:center no-repeat;
+	background-size:cover;
+	text-align:center;
+	right: -200%;
+	left: -200%;
+	top:0%;
+	bottom:0%;
+	position:absolute;
+}
